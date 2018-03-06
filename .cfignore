@@ -1,0 +1,5 @@
+# No need for ...
+/src
+/e2e_tests
+/test_helpers
+/test_results
