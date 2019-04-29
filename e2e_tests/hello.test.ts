@@ -1,5 +1,4 @@
-import 'jest';
-import * as req from 'request-promise-lite';
+import { req } from 'request-promise-lite';
 
 const BASE_URL = process.env.BASE_URL;
 

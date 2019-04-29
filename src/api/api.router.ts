@@ -1,9 +1,10 @@
 import * as express from 'express';
+
+import { getDbPool } from '../db.config';
 import { modelBase } from './models/_modelBase';
 import { OevCategory } from './models/oevCategory';
-import { OevCompetitor } from './models/oevCompetitor';
 import { OevClub } from './models/oevClub';
-import { getDbPool } from '../db.config';
+import { OevCompetitor } from './models/oevCompetitor';
 
 const _oevCategory = new OevCategory();
 const _oevCompetitor = new OevCompetitor();

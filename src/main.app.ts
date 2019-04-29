@@ -1,10 +1,9 @@
-import * as express from 'express';
-import { Request, Response, NextFunction } from 'express';
-import * as morgan from 'morgan';
 import * as cors from 'cors';
+import * as express from 'express';
+import * as morgan from 'morgan';
 
 import { ApiRouter } from './api/api.router';
-import { } from ''
+
 export const MainApp = express();
 
 // configure logging
@@ -25,9 +24,10 @@ MainApp.use('/', express.static('dist-static'));
 /**
  * Error handling function
  */
-MainApp.use((err: any, request: Request, response: Response, next: NextFunction) => {
+MainApp.use((err: any, request: express.Request, response: express.Response, next: express.NextFunction) => {
   console.error('HTTP request handling error');
   console.error(err);
+
   response.status(500).send({ error: 'Something failed!' })
 });
 
